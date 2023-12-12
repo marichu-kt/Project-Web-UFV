@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MARIO WEBSITE UFV</title>
+    <link rel="shortcut icon" href="./PUBLIC/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <meta name="title" content="MARIO WEBSITE UFV">
+    <meta name="description" content="THIS IS A WEBSITE FOR A UFV PROJECT FOR FUNDAMENTALS OF COMPUTER ENGINEERING">
+    <meta name="theme-color" content="#2091F9">
+
+    <style>
+        .hero__title {
+            font-size: 8em;
+        }
+
+        body {
+            background-image: url('PUBLIC/images/wallpaper-3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.4em;
+            margin-bottom: 20px;
+        }
+
+        #cv {
+            width: 90%;
+            max-width: 800px;
+            background: #f3f3f3;
+            margin: 30px auto;
+        }
+
+        .mainDetails {
+            padding: 25px 35px;
+            border-bottom: 2px solid #cf8a05;
+            background: #ededed;
+        }
+
+        #name h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: -6px;
+        }
+
+        #name h2 {
+            font-size: 2em;
+            margin-left: 2px;
+        }
+
+        #mainArea {
+            padding: 0 40px;
+        }
+
+        #headshot {
+            width: 12.5%;
+            float: left;
+            margin-right: 30px;
+        }
+
+        #headshot img {
+            width: 100%;
+            height: auto;
+            -webkit-border-radius: 50px;
+            border-radius: 50px;
+        }
+
+        #name {
+            float: left;
+        }
+
+        #contactDetails {
+            float: right;
+        }
+
+        #contactDetails ul {
+            list-style-type: none;
+            font-size: 0.9em;
+            margin-top: 2px;
+        }
+
+        #contactDetails ul li {
+            margin-bottom: 3px;
+            color: #444;
+        }
+
+        #contactDetails ul li a, a[href^=tel] {
+            color: #444;
+            text-decoration: none;
+            -webkit-transition: all .3s ease-in;
+            -moz-transition: all .3s ease-in;
+            -o-transition: all .3s ease-in;
+            -ms-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+        }
+
+        #contactDetails ul li a:hover {
+            color: #cf8a05;
+        }
+
+        section {
+            padding: 20px 0 0;
+        }
+
+        section:first-child {
+            border-top: 0;
+        }
+
+        section:last-child {
+            padding: 20px 0 10px;
+        }
+
+        .sectionTitle {
+            float: left;
+            width: 25%;
+        }
+
+        .sectionContent {
+            float: right;
+            width: 72.5%;
+        }
+
+        .sectionTitle h1 {
+
+            font-size: 1.5em;
+            color: #cf8a05;
+        }
+
+        .sectionContent h2 {
+            font-size: 1.5em;
+            margin-bottom: -2px;
+        }
+
+        .subDetails {
+            font-size: 0.8em;
+            margin-bottom: 3px;
+        }
+
+        .keySkills {
+            list-style-type: none;
+            -moz-column-count: 3;
+            -webkit-column-count: 3;
+            column-count: 3;
+            margin-bottom: 20px;
+            font-size: 1em;
+            color: #444;
+        }
+
+        .keySkills ul li {
+            margin-bottom: 3px;
+        }
+
+        @media all and (min-width: 602px) and (max-width: 800px) {
+            #headshot {
+                display: none;
+            }
+
+            .keySkills {
+                -moz-column-count: 2;
+                -webkit-column-count: 2;
+                column-count: 2;
+            }
+        }
+
+        @media all and (max-width: 601px) {
+            #cv {
+                width: 95%;
+                margin: 10px auto;
+                min-width: 280px;
+            }
+
+            #headshot {
+                display: none;
+            }
+
+            #name, #contactDetails {
+                float: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            .sectionTitle, .sectionContent {
+                float: none;
+                width: 100%;
+            }
+
+            .sectionTitle {
+                margin-left: -2px;
+                font-size: 1.25em;
+            }
+
+            .keySkills {
+                -moz-column-count: 2;
+                -webkit-column-count: 2;
+                column-count: 2;
+            }
+        }
+
+        @media all and (max-width: 480px) {
+            .mainDetails {
+                padding: 15px 15px;
+            }
+
+            section {
+                padding: 15px 0 0;
+            }
+
+            #mainArea {
+                padding: 0 25px;
+            }
+
+            .keySkills {
+                -moz-column-count: 1;
+                -webkit-column-count: 1;
+                column-count: 1;
+            }
+
+            #name h1 {
+                line-height: .8em;
+                margin-bottom: 4px;
+            }
+        
+            #cv {
+                width: 100%;
+            }
+        }
+
+        @-webkit-keyframes reset {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes reset {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @-moz-keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes reset {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            40% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #headshot1 img {
+            width: 150px;
+            height: auto;
+        }
+
+        #headshot1 img {
+            width: 150px;
+            height: auto;
+        }
+
+
+        #headshot1 img {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+
+</head>
+
+<body id="top">
+
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h1 class="nav__title">THIS IS A WEBSITE FOR A UFV PROJECT FOR FUNDAMENTALS OF COMPUTER ENGINEERING</h1>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="index.html" class="nav__links">Home</a>
+                </li>
+                <li class="nav__items">
+                    <a href="topic.html" class="nav__links">Topic</a>
+                </li>
+                <li class="nav__items">
+                    <a href="fll.html" class="nav__links">FII</a>
+                </li>
+                <li class="nav__items">
+                    <a href="red.html" class="nav__links">Red</a>
+                </li>
+                <li class="nav__items">
+                    <a href="about.html" class="nav__links">About</a>
+                </li>
+                <li class="nav__items">
+                    <a href="contact.html" class="nav__links">Contact</a>
+                </li>
+
+                <img src="images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h2 class="hero__title">ABOUT</h2>
+            <a href="https://www.ufv.es/" class="cta">UFV</a>
+        </section>
+
+    </header>
+
+    <main>
+            <div id="cv" class="instaFade">
+                <div class="mainDetails">
+                    <div id="headshot" class="quickFade">
+                        <img src="PUBLIC/images/walt-1.jpg" alt="Alan Smith" />
+                    </div>
+                    
+                    <div id="name">
+                        <h1 class="quickFade delayTwo">Walter White</h1><br>
+                        <h2 class="quickFade delayTwo">Bryan Cranston</h2><br>
+                        <h3 class="quickFade delayThree">Heisenberg</h3>
+                    </div>
+                    
+                    <div id="contactDetails" class="quickFade delayFour">
+                        <ul>
+                            <li>e: <a href="https://www.breakingbad-locations.com/contact/" target="_blank">walter.white@lospolloshermanos.com</a></li>
+                            <li>w: <a href="http://www.savewalterwhite.com/">http://www.savewalterwhite.com/</a></li>
+                            <li>w: <a href="http://bettercallsaul.amc.com/">http://www.bettercallsaul.com/</a></li>
+                            <li>w: <a href="http://www.lphishiring.com/">http://www.lospolloshermanos.com/</a></li>
+                            <li>w: <a href="PUBLIC/PDF/walt.pdf">A Teacher Goes Gothic</a></li>
+                            <li>v: <a href="https://youtu.be/HhesaQXLuRY">Trailer Breaking Bad S1</a></li>
+                            <li>m: +1 XXX XX XX XX</li>
+
+                            <li> 
+                                <audio controls style="width: 70%;">
+                                    <source src="PUBLIC/audio/audio.mp3" type="audio/mp3">
+                                </audio>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+                <div id="mainArea" class="quickFade delayFive">
+                    <section>
+                        <article>
+                            <div class="sectionTitle">
+                                <h1>Personal Profile</h1>
+                                <div id="headshot1" class="quickFade"><br><br><br>
+                                    <img src="PUBLIC/images/walt-2.jpg" alt="Alan Smith" />
+                                </style>
+                                </div>
+                            </div>
+                            
+                            <div class="sectionContent">
+                                <p>He is introduced as a chemist who graduated from the California Institute of Technology, who co-founded the company Gray Matter Technologies. He left Gray Matter abruptly, selling his shares for $5,000. Soon after, the company made a fortune, largely thanks to Walt's research. Walt later moved to Albuquerque, New Mexico, where he became a high school chemistry teacher. On his 50th birthday, he is diagnosed with stage IIIA lung cancer. After this discovery, Walt turns to manufacturing and selling methamphetamine with a former student of his, Jesse Pinkman (Aaron Paul), to ensure his family's financial security after his death. He becomes increasingly immersed in the illicit drug trade, becoming more ruthless as the series progresses, and later adopts the alias "Heisenberg", which becomes recognizable as a key figure in the Southwestern drug trade.
+                                </p>
+                            </div>
+                        </article>
+                        <div class="clear"></div>
+                    </section>
+                    
+                    <section>
+
+                        <div class="sectionTitle">
+
+                            <h1>Work Experience</h1>
+
+                            <div id="headshot1" class="quickFade"><br><br><br>
+                                <img src="PUBLIC/images/walt-3.png" alt="Alan Smith" />
+                            </div>
+
+
+                            <div id="headshot1" class="quickFade"><br><br><br>
+                                <img src="PUBLIC/images/walt-4.jpg" alt="Alan Smith" />
+                            </div>
+
+                            <div id="headshot1" class="quickFade"><br><br><br>
+                                <img src="PUBLIC/images/walt-5.png" alt="Alan Smith" />
+                            </div>
+
+                            <div id="headshot1" class="quickFade"><br><br><br>
+                                <img src="PUBLIC/images/walt-6.jpg" alt="Alan Smith" />
+                            </div>
+                        </div>
+    
+                        <div class="sectionContent">
+                            <article>
+                                <h2>J. P. Wynne High School</h2>
+                                <p class="subDetails">1989 - 2007</p>
+                                <p>
+                                    Walter White, the central character in the television series "Breaking Bad," worked as a high school chemistry teacher at J. P. Wynne High School, a fictional educational institution set in Albuquerque, New Mexico. Despite his considerable expertise in chemistry, Walter faced financial struggles due to the relatively modest income associated with his teaching profession. To supplement his earnings, he took on a part-time job at the A1A Car Wash, showcasing the challenges of making ends meet. However, Walter's life took a dramatic turn when he received a terminal cancer diagnosis. Faced with the urgency of providing for his family's financial future, he entered the illicit world of methamphetamine production, utilizing his scientific knowledge to become a key player in the drug trade. The juxtaposition of Walter's initial role as an educator with his eventual descent into criminality forms the core narrative of "Breaking Bad."</p>
+                            </article>
+                            
+                            <article>
+                                <h2>A1A Car Wash</h2>
+                                <p class="subDetails">2001 - 2007</p>
+                                <p>Walter White worked as a car wash at A1A Car Wash, a fictitious company located in Albuquerque, New Mexico, as part of his efforts to supplement his income as a chemistry teacher. This job at the car wash, which contrasted markedly with his experience and knowledge in chemistry, illustrates the economic challenges Walter faced. Although trained as a scientist, he was forced to take on less specialized work to make ends meet and cope with increasing financial pressures that eventually led him to make drastic decisions in the "Breaking Bad" storyline.</p>
+                            </article>
+                            
+                            <article>
+                                <h2>Other business</h2>
+                                <p class="subDetails">2007 - September 7, 2010</p>
+                                <p>Walter White began working with Gustavo Fring in the drug trafficking business in "Breaking Bad." Under the façade of an industrial laundry company called "Los Pollos Hermanos", Gus Fring hid his extensive methamphetamine empire. Walter, along with his partner Jesse Pinkman, became involved in drug production in a laboratory hidden under the laundry room. This agreement was established around the second season of the series, after Walter and Jesse began to face challenges and threats in the drug market. The working relationship with Gus Fring provided Walter with an efficient infrastructure for the manufacturing and distribution of methamphetamines, although tensions and conflicts developed between the two characters throughout the series.
+
+                                </p>
+                            </article>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                    
+                    <section>
+                        <div class="sectionTitle">
+                            <h1>Key Skills</h1>
+                        </div>
+                        
+                        <div class="sectionContent">
+                            <ul class="keySkills">
+                                <li>Chemistry Expertise</li>
+                                <li>Teaching</li>
+                                <li>Problem-Solving</li>
+                                <li>Resourcefulness</li>
+                                <li>Manipulation and Deception</li>
+                                <li>Entrepreneurial</li>
+                                <li>Risk-Taking</li>
+                                <li>Leadership</li>
+                                <li>Adaptability everywhere</li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                    
+                    <section>
+                        <div class="sectionTitle">
+                            <h1>Education</h1>
+
+                            <div id="headshot1" class="quickFade"><br><br><br>
+                                <img src="PUBLIC/images/walt-7.jpg" alt="Alan Smith" />
+                            </div>
+
+                        </div>
+                        
+                        <div class="sectionContent">
+                            <article>
+                                <h2>College/University</h2>
+                                <p class="subDetails">Chemistry teacher</p>
+                                <p>Walter White, the fictional character from the television series "Breaking Bad," is portrayed as a high school chemistry teacher turned methamphetamine manufacturer. In the show, Walter White is said to have attended the California Institute of Technology (Caltech), where he conducted groundbreaking research with his colleague Elliott Schwartz. However, it's important to note that "Breaking Bad" is a work of fiction, and Walter White is not a real person.</p>
+                            </article>
+                            
+                        </div>
+                        <div class="clear"></div>
+                    </section>
+                    
+                </div>
+            </div>
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+            <script type="text/javascript">
+                var pageTracker = _gat._getTracker("UA-3753241-1");
+                pageTracker._initData();
+                pageTracker._trackPageview();
+            </script><br>
+
+    </main>
+
+    <footer class="footer">
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="https://www.facebook.com/UFVmadrid/?locale=es_ES" class="footer__icons"><img src="PUBLIC/images/facebook.svg" class="footer__img"></a>
+                <a href="https://twitter.com/ufvmadrid" class="footer__icons"><img src="PUBLIC/images/twitter.svg" class="footer__img"></a>
+                <a href="http://www.youtube.com/@ufvmadrid" class="footer__icons"><img src="PUBLIC/images/youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">Copyright 2023. All rirghts are reserved. &copy; Mario Martinez Lozano</h3>
+        </section>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+</body>
+</html>

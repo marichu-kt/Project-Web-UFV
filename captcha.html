@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        body {
+        background: url('PUBLIC/images/wallpaper-7.gif') center center fixed;
+        background-size: cover;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+    }
+
+    html, body {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        #captchaBackground {
+            height: 220px;
+            width: 250px;
+            background-color: #2d3748;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        #captchaHeading {
+            color: white;
+        }
+
+        #captcha {
+            height: 80%;
+            width: 80%;
+            font-size: 40px; 
+            letter-spacing: 3px;
+            margin: auto;
+            display: block;
+            z-index: 0; /* Coloca el canvas detrás del texto */
+        }
+
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #submitButton {
+            margin-top: 2em;
+            margin-bottom: 2em;
+            background-color: #08e5ff;
+            border: 0px;
+            font-weight: bold;
+        }
+
+        #refreshButton {
+            background-color: #08e5ff;
+            border: 0px;
+            font-weight: bold;
+        }
+
+        #textBox {
+            height: 25px;
+        }
+
+        .incorrectCaptcha {
+            color: #FF0000;
+        }
+
+        .correctCaptcha {
+            color: #7FFF00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center" style="margin-top: -100px;">
+        <img src="PUBLIC/images/captcha.png" alt="Robot Image" style="width: 100px; height: 100px;">
+        <h1 id="captchaHeading">
+            Confirm that you are not a robot
+        </h1>
+
+        <div id="captchaBackground">
+            <canvas id="captcha">captcha text</canvas>
+            <input id="textBox" type="text" name="text">
+
+            <div id="buttons">
+                <input id="submitButton" type="submit">
+                <button id="refreshButton" type="submit">Refresh</button>
+            </div>
+
+            <span id="output"></span>
+        </div>
+    </div>
+
+    <script>
+        let captchaText = document.getElementById('captcha');
+        var ctx = captchaText.getContext("2d");
+        ctx.font = "30px Roboto";
+        ctx.fillStyle = "#08e5ff";
+
+        let userText = document.getElementById('textBox');
+        let submitButton = document.getElementById('submitButton');
+        let output = document.getElementById('output');
+        let refreshButton = document.getElementById('refreshButton');
+
+        var captchaStr = "";
+
+        let alphaNums = ['A', 'B', 'C', 'D', 'E', 'F', 'G',
+            'H', 'I', 'J', 'K', 'L', 'M', 'N',
+            'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+            'V', 'W', 'X', 'Y', 'Z', 'a', 'b',
+            'c', 'd', 'e', 'f', 'g', 'h', 'i',
+            'j', 'k', 'l', 'm', 'n', 'o', 'p',
+            'q', 'r', 's', 't', 'u', 'v', 'w',
+            'x', 'y', 'z', '0', '1', '2', '3',
+            '4', '5', '6', '7', '8', '9'
+        ];
+
+        function generate_captcha() {
+            let emptyArr = [];
+
+            for (let i = 1; i <= 7; i++) {
+                emptyArr.push(alphaNums[Math.floor(Math.random() * alphaNums.length)]);
+            }
+
+            captchaStr = emptyArr.join('');
+
+            ctx.clearRect(0, 0, captchaText.width, captchaText.height);
+            ctx.font = "60px Roboto";
+
+            const textWidth = ctx.measureText(captchaStr).width;
+            const xPosition = (captchaText.width - textWidth) / 2;
+            const yPosition = captchaText.height / 2 + 10;
+ 
+            ctx.fillText(captchaStr, xPosition, yPosition);
+
+            output.innerHTML = "";
+        }
+
+        generate_captcha();
+
+        function check_captcha() {
+            if (userText.value === captchaStr) {
+                output.className = "correctCaptcha";
+                output.innerHTML = "Correct!";
+                window.location.href = "index.html";
+
+            } else {
+                output.className = "incorrectCaptcha";
+                output.innerHTML = "Incorrect, please try again!";
+            }
+        }
+
+        userText.addEventListener('keyup', function (e) {
+            if (e.key === 'Enter') {
+                check_captcha();
+            }
+        });
+
+        submitButton.addEventListener('click', check_captcha);
+
+        refreshButton.addEventListener('click', generate_captcha);
+
+    </script>
+</body>
+
+</html>

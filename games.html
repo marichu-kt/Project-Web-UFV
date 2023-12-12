@@ -1,0 +1,106 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <title>MARIO WEBSITE UFV</title>
+      <link rel="shortcut icon" href="./PUBLIC/images/favicon.png" type="image/x-icon">
+  
+      <meta name="title" content="MARIO WEBSITE UFV">
+      <meta name="description" content="THIS IS A WEBSITE FOR A UFV PROJECT FOR FUNDAMENTALS OF COMPUTER ENGINEERING">
+
+    <style>
+        :root {
+             --w: 20em; 
+             --easing: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        @media screen and (max-height: 35em) {
+        :root {
+            --w: 50vh;  
+           }  
+        }
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Apply Monaco font */
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .main {
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5em; 
+            margin-bottom: 0.2em; 
+        }
+
+        [window] {
+            width: var(--w);
+            height: calc(var(--w) * 1.6);
+            min-width: 15em;
+            min-height: 20em;
+            position: relative;
+            background: #444;
+            box-shadow: 0 0 20px rgba(125, 125, 125, .2);
+            overflow: hidden;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 3em;
+        }
+  </style>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fantasy&display=swap">
+  <title>GAMES</title>
+</head>
+
+<body>
+  <video autoplay muted loop>
+    <source src="PUBLIC/images/wallpaper-5.mp4" type="video/mp4">
+  </video>
+  <div class="overlay">
+    <div class="main">
+      <h1>GAMES</h1>
+      <details>
+        <summary><a href="game-1.html">Game 1</a></summary>
+      </details>
+      <details>
+        <summary><a href="game-2.html">Game 2</a></summary>
+      </details>      <details>
+        <summary><a href="game-3.html">Game 3</a></summary>
+      </details>
+    </div>
+  </div>
+</body>
+</html>

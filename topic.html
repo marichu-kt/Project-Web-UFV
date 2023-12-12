@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MARIO WEBSITE UFV</title>
+    <link rel="shortcut icon" href="./PUBLIC/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <meta name="title" content="MARIO WEBSITE UFV">
+    <meta name="description" content="THIS IS A WEBSITE FOR A UFV PROJECT FOR FUNDAMENTALS OF COMPUTER ENGINEERING">
+    <meta name="theme-color" content="#2091F9">
+
+    <style>
+        .hero__title {
+        font-size: 8em;
+        }
+        .nav__logo {
+        font-size: 32px;
+        }
+        body {
+        background-color: #ffffff;
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700);
+        *, *:before, *:after {
+            margin:0;
+            padding:0;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            box-sizing:border-box;
+        }
+
+        em {font-style:normal;font-size:1.2em;}
+        i {font-style:normal;color:#00ff77;}
+        h1, p, hr, .etc {
+            width:100%;
+            max-width:40rem;
+            margin:0 auto;
+        }
+
+        p {padding-bottom:1em;}
+
+        h1 {
+            position:relative;
+            padding:3rem 0 6rem 0;
+            font-size:3em;
+            line-height:1em;
+            font-weight:700;
+            text-transform:uppercase;
+            letter-spacing:5px;
+        }
+
+        h1:before {
+            content:'\3C\21\2013\2013';
+            position:absolute;
+            top:0;
+            left:0;
+            color:#00ff77;
+    }
+
+        h1:after {
+            content:'\2013\2013\3E';
+            position:absolute;
+            bottom:3rem;
+            left:0;
+            color:#fe0002;
+        }
+
+        hr {
+            position:relative;
+            padding:3rem 0;
+            border:none;
+        }
+
+        hr:before {
+            content:'\2044\2217\2013\2013\2013\2013\2013\2217\2044';
+            position:absolute;
+            top:1.2rem;
+            right:0;
+            left:0;
+            font-size:1.5em;
+            color:#0200fb;
+            text-align:center;
+        }
+
+        .etc {
+            position:relative;
+            padding:6rem 0 1rem 0;
+            text-align:center;
+            color:#fe0002;
+        }
+
+        .terminal {
+            background-color: #323c;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 600px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #323c;
+            padding: 10px;
+            user-select: none;
+        }
+        
+        .button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .close {
+            background-color: #e06c75;
+        }
+        
+        .minimize {
+            background-color: #d19a66;
+        }
+        
+        .expand {
+            background-color: #98c379;
+        }
+        
+        .title {
+            flex-grow: 1;
+            font-size: 14px;
+        }
+        
+        .content {
+            padding: 10px;
+        }
+        
+        .input-line {
+            display: flex;
+            padding: 10px;
+            background-color: #3b4048;
+        }
+        
+        .prompt {
+            color: #61afef;
+            margin-right: 5px;
+        }
+        
+        input {
+            background: none;
+            border: none;
+            outline: none;
+            color: #d0d0d0;
+            width: 100%;
+        }
+        .white-text-container,
+        .white-text-container * {
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h4 class="nav__title">THIS IS A WEBSITE FOR A UFV PROJECT FOR FUNDAMENTALS OF COMPUTER ENGINEERING</h4>
+            </div>
+
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="index.html" class="nav__links">Home</a>
+                </li>
+                <li class="nav__items">
+                    <a href="topic.html" class="nav__links">Topic</a>
+                </li>
+                <li class="nav__items">
+                    <a href="fll.html" class="nav__links">FII</a>
+                </li>
+                <li class="nav__items">
+                    <a href="red.html" class="nav__links">Red</a>
+                </li>
+                <li class="nav__items">
+                    <a href="about.html" class="nav__links">About</a>
+                </li>
+                <li class="nav__items">
+                    <a href="contact.html" class="nav__links">Contact</a>
+                </li>
+
+                <img src="./images/close.svg" class="nav__close">
+            </ul>
+
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h2 class="hero__title">TOPIC</h2>
+            <a href="https://www.ufv.es/" class="cta">UFV</a>
+        </section>
+    </header>
+
+    <main id="custom-script-container">
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700);
+        </style>
+
+        <div class="custom-container">
+        <h1>Setup<br />Proxychains<br />In<br />Linux</h1>
+
+        <p><em>Proxychains in Linux is another tool for anonymity providing anonymity and safe browsing with proxychains is easy. The proxychains works on socks4, socks5, HTTP, and https protocols. Setting up proxychains is easy but many users get errors while using them, some of the most common errors occur during tor installation and other errors like proxychain starts but you are not anonymous and your DNS leaks appear. </em>
+
+        <center><img src="PUBLIC/images/proxy.png" alt="description" width="800" height="200"></center>
+
+        <p><em>For more information, I leave a video tutorial explaining what ProxyChains is and its differences compared to a normal proxy, how to use it and why, this video belongs to the HackerSploit channel, I recommend that you go watch it because it has very interesting things that may be of interest .</em></p><br>
+
+        <center><iframe width="560" height="315" src="https://www.youtube.com/embed/jqrd9Ba3VOc" frameborder="0" allowfullscreen></iframe></center>
+
+        <br><p><em>This tool is available&nbsp;<a href="https://www.kali.org/tools/proxychains-ng/"><span style="color: blue;">HERE</span></a>, remember this tool is only for educational purposes, I am not responsible for the misuse.</em></p>
+
+        <p><em>First, update the Linux system with the patches and the latest applications. For this we open a terminal and type:</em></p><br>
+
+        <center>
+            <div class="white-text-container">
+                <div class="terminal">
+                    <div class="header">
+                        <span class="button close"></span>
+                        <span class="button minimize"></span>
+                        <span class="button expand"></span>
+                        <div class="title">Terminal</div>
+                    </div>
+                    <div class="input-line">
+                        <span class="prompt">$ sudo apt-get update && sudo apt-get upgrade</span>
+                    </div>
+                </div>
+            </div>
+        </center>
+        
+        <br><p><em>After the update and update we need to install tor, we will do it with the following command:</em></p><br>
+        
+        <center>
+            <div class="white-text-container">
+                <div class="terminal">
+                    <div class="header">
+                        <span class="button close"></span>
+                        <span class="button minimize"></span>
+                        <span class="button expand"></span>
+                        <div class="title">Terminal</div>
+                    </div>
+                    <div class="input-line">
+                        <span class="prompt">$ sudo apt-get install proxychains tor -y</span>
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <br><p><em>We had already installed tor service before so there will be a difference in execution. If you get any error while doing this then check below steps in this article. After installing tor service, now we need to configure proxychains. To do so use the following command.</em></p><br>
+        
+        <center>
+            <div class="white-text-container">
+                <div class="terminal">
+                    <div class="header">
+                        <span class="button close"></span>
+                        <span class="button minimize"></span>
+                        <span class="button expand"></span>
+                        <div class="title">Terminal</div>
+                    </div>
+                    <div class="input-line">
+                        <span class="prompt">$ sudo nano /etc/proxychains4.conf</span>
+ 
+                    </div>
+                </div>
+            </div>
+        </center>
+      
+        <br><p><em>You can use any editor of your choice here we are using nano, you can also use vim, leafpad or sublime etc.</em></p>
+        
+        <p><em>In the configuration, you will see “#” which means bash language comments. You can use arrow keys to scroll down and do the following changes.</em></p>
+
+            <p><em>- Remove Dynamic chain from comment</em></p>
+            <p><em>- Comment Strict chain and Random chain</em></p>
+            <p><em>- Remove proxy DNS from comment</em></p>
+            <p><em>- Write http/socks4/socks5 127.0.0.1 9050 in last line</em></p>
+            <p><em>This are the changes that we have changed, leave it like this&nbsp;<a href="PUBLIC/txt/proxychains.conf"><span style="color: blue;">EXAMPLE</span></a>, just follow the instructions.</em></p><br>
+
+        <center>
+            <div class="white-text-container">
+                <div class="terminal">
+                    <div class="header">
+                        <span class="button close"></span>
+                        <span class="button minimize"></span>
+                        <span class="button expand"></span>
+                        <div class="title">Terminal</div>
+                    </div>
+                    <div class="input-line">
+                        <span class="prompt">
+                            <p>dynamic_chain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p>#strict_chain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p>proxy_dns&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p>tcp_read_time_out 15000   tcp_connect_time_out 8000</p>
+                            <p>http 127.0.0.1 9050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p>socks4 127.0.0.1 9050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p>socks5 127.0.0.1 9050&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </center><br>
+        
+        <p><em>Save the configuration file and exit the terminal. The proxychains setup is complete. To start proxychains first restart the tor service and then launch proxychains in firefox with a link for a particular search engine like bing, duckduck go. Use the following commands:</em></p><br>
+        
+        <center>
+            <div class="white-text-container">
+                <div class="terminal">
+                    <div class="header">
+                        <span class="button close"></span>
+                        <span class="button minimize"></span>
+                        <span class="button expand"></span>
+                        <div class="title">Terminal</div>
+                    </div>
+                    <div class="input-line">
+                        <span class="prompt">
+                            <p>service tor restart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                            <p>proxychains firefox www.duckduckgo.com</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </center><br>
+
+        <p><em>Good news, you are already under a chain of Tor proxies, which will allow you to browse the Internet in a more secure way, your IP will constantly change so it will be more difficult to track you, stay safe = be responsible.</em></p>
+        <p>ONLY FOR EDUCATIONAL PURPOSES, I AM NOT RESPONSIBLE THE MISUSE OF THIS TOOL</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+
+        <section class="footer__copy container">
+            <div class="footer__social">
+                <a href="https://www.facebook.com/UFVmadrid/?locale=es_ES" class="footer__icons"><img src="./PUBLIC/images/facebook.svg" class="footer__img"></a>
+                <a href="https://twitter.com/ufvmadrid" class="footer__icons"><img src="./PUBLIC/images/twitter.svg" class="footer__img"></a>
+                <a href="http://www.youtube.com/@ufvmadrid" class="footer__icons"><img src="./PUBLIC/images/youtube.svg" class="footer__img"></a>
+            </div>
+
+            <h3 class="footer__copyright">Copyright 2023. All rirghts are reserved. &copy; Mario Martinez Lozano</h3>
+        </section>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+</body>
+</html>
