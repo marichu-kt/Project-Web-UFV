@@ -27,12 +27,19 @@ For more information contact [marichu.private@proton.me] with any additional que
 
 ## Content
 
-- [Home](#)
-- [About](#)
-- [Contact](#)
-- [Red](#)
-- [Topic](#)
-- [Fundamentals of Computer Engineering](#)
+- [Home](index.html)
+- [About](about.html)
+- [Contact](contact.html)
+- [Red](red.html)
+- [Topic](topic.html)
+- [Fundamentals of Computer Engineering](fll.html)
+- [Page not found 404](404.html)
+- [Games](games.html)
+- [Game 1](game-1.html)
+- [Game 2](game-2.html)
+- [Game 3](game-3.html)
+- [Subpage](subpage.html)
+- [Captcha](captcha.html)
 
 
 ## Configuration
@@ -81,7 +88,7 @@ configuration, or even server overload. We are working to resolve this issue in 
 
 ## Problems and Suggestions
 
-If you find any problems or have suggestions to improve the page, please open an [issue](https://github.com/marichu-kt/project-html-website/issues).
+If you find any problems or have suggestions to improve the page, please open an [issue](https://github.com/marichu-kt/Project-Web_UFV/issues).
 
 
 ## Conclusions and Next Steps
