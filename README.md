@@ -20,9 +20,6 @@ it tries to ensure that users can easily follow each section and section in an e
 for onion routing search engines such as Tor Browser, which allows us to view this page on the Internet without having 
 to download it and view it locally if not remotely.
 
-For more information contact [marichu.private@proton.me] with any additional questions or comments.
-
-
 ## Content
 
 - [Home](index.html)
