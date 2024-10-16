@@ -5,10 +5,6 @@ Welcome to my Website! This page is intended to describe the purpose or main con
 
 ![Icono](PUBLIC/images/banner.png)
 
-## License
-
-See [LICENSE](LICENSE).
-
 
 ## Author Info
 
