@@ -14,7 +14,7 @@ See [LICENSE](LICENSE).
 
 - Name: [Mario-Martínez-Lozano]
 - Course: [First-Engineering-Computer-Science]
-- Group: [4-C]
+- Group: [1-C]
 
 
 ## Description
